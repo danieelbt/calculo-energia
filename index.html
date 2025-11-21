@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Consumo Energético</title>
+  <!-- <link rel="manifest" href="manifest.json"> -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<header class="cabecalho">
+    <nav class="nav-tabs">
+        <ul>
+            <li data-tab="eletrica" id="li-eletrica"><a href="#">⚡ Energia Elétrica</a></li>
+            <li data-tab="solar" id="li-solar"><a href="./pages/solar.html">🌞 Energia Solar</a></li>
+            <li data-tab="dicas" id="li-dicas"><a href="./pages/dicas.html">💡Dicas</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+<h2>Calculadora de Consumo Energético</h2>
+
+<div>
+  <label>Potência (W):</label>
+  <input id="potencia" type="number" placeholder="Ex: 150" />
+
+  <label>Horas por dia:</label>
+  <input id="horas" type="number" placeholder="Ex: 4" />
+
+  <label>Tarifa (R$/kWh):</label>
+  <input id="tarifa" type="number" value="0.90" step="0.01" />
+  <h3 id="resultado">Resultado:</h3>
+  <div id="sugestoes"></div>
+</div>
+
+<button onclick="calcular()">Calcular</button>
+
+<script src="./js/app.js"></script>
+
+</body>
+</html>

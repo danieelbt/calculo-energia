@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Consumo Energético | Simulação Energia Solar</title>
+  <!-- <link rel="manifest" href="manifest.json"> -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<header class="cabecalho">
+    <nav class="nav-tabs">
+        <ul>
+            <li class="active" data-tab="eletrica"><a href="../index.html">⚡ Energia Elétrica</a></li>
+            <li data-tab="solar"><a href="#">🌞 Energia Solar</a></li>
+            <li data-tab="dicas"><a href="./dicas.html">💡Dicas</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    
+
+<h3>Simulação com Painéis Solares</h3>
+<div>
+  <label>kWh a compensar:</label>
+  <input id="compensar" type="number" placeholder="Ex: 100" />
+  <label>Tarifa (R$/kWh):</label>
+  <input id="tarifa" type="number" value="0.90" step="0.01" />
+  <div id="sugestoesSolar"></div>
+</div>
+
+<button onclick="simularSolar()">Simular</button>
+
+<h3 id="resultadoSolar">Resultado:</h3>
+
+<canvas id="graficoEconomia"></canvas>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script src="../js/app.js"></script>
+</body>
+
+</html>
