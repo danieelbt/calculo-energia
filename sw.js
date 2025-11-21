@@ -2,11 +2,10 @@ self.addEventListener("install", event => {
   event.waitUntil(
     caches.open("v1").then(cache => {
       return cache.addAll([
-        "./",
-        "index.html",
-        "style.css",
-        "script.js",
-        "manifest.json",
+        "/calculo-energia/index.html",
+        "/calculo-energia/style.css",
+        "/calculo-energia/script.js",
+        "/calculo-energia/manifest.json",
       ]);
     })
   );
