@@ -1,12 +1,14 @@
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open("pwa-cache").then(cache => {
+    caches.open("v1").then(cache => {
       return cache.addAll([
-        "/",
-        "/index.html",
-        "/app.js",
-        "/style.css",
-        "/manifest.json"
+        "./",
+        "index.html",
+        "style.css",
+        "script.js",
+        "manifest.json",
+        "icons/icon-192.png",
+        "icons/icon-512.png"
       ]);
     })
   );
@@ -14,6 +16,8 @@ self.addEventListener("install", event => {
 
 self.addEventListener("fetch", event => {
   event.respondWith(
-    caches.match(event.request).then(resp => resp || fetch(event.request))
+    caches.match(event.request).then(res => {
+      return res || fetch(event.request);
+    })
   );
 });
