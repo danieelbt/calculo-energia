@@ -1,4 +1,4 @@
-# Cálculo de Energia ⚡🌞
+# Cálculo de Energia
 
 Uma aplicação web (PWA) para estimar consumo energético, custo mensal e simular economia com energia solar, com dicas práticas para reduzir o consumo doméstico e empresarial.
 
